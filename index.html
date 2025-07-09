@@ -1,207 +1,205 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Programa Santa Ana 2025 — Brea de Aragón</title>
   <style>
     body {
       font-family: sans-serif;
-      background-color: #f9f9f9;
       margin: 0;
       padding: 0;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
     }
-
     .container {
-      max-width: 800px;
-      margin: 100px auto 20px auto;
-      background-color: #fff;
-      border: 5px solid #0077cc; /* azul */
-      border-radius: 20px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
-      padding: 20px;
-      box-sizing: border-box;
+      display: flex;
+      border: 2px solid #007BFF;
+      max-width: 900px;
+      margin: 20px auto;
+      background: white;
     }
-
+    nav {
+      min-width: 150px;
+      background-color: #007BFF;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+    nav button {
+      background: none;
+      border: none;
+      color: white;
+      margin: 10px 0;
+      font-size: 16px;
+      cursor: pointer;
+      text-align: left;
+    }
+    nav button:hover {
+      text-decoration: underline;
+    }
+    .content {
+      padding: 20px;
+      flex: 1;
+    }
+    .section {
+      display: none;
+    }
+    .section.active {
+      display: block;
+    }
     h1, h2 {
       text-align: center;
-      margin-top: 0;
+      color: #007BFF;
     }
-
     .actividad {
       margin: 10px 0;
     }
-
     .comida {
       background-color: #f2f2f2;
       padding: 10px;
       margin-top: 10px;
-      border-radius: 10px;
     }
-
-    .menu {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: #fff;
-      border-bottom: 3px solid #0077cc;
-      display: flex;
-      justify-content: center;
-      padding: 10px 0;
-      z-index: 999;
-    }
-
-    .menu a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #0077cc;
-      font-weight: bold;
-      transition: color 0.3s, border-bottom 0.3s;
-      cursor: pointer;
-      border-bottom: 2px solid transparent;
-    }
-
-    .menu a:hover {
-      border-bottom: 2px solid #0077cc;
-    }
-
-    section {
-      display: none;
-    }
-
-    section.active {
-      display: block;
-    }
-
     footer {
       margin-top: 30px;
       font-size: 0.9em;
       color: #666;
       text-align: center;
     }
-
     .imagenes-viernes {
       display: flex;
       justify-content: center;
-      gap: 40px;
+      align-items: flex-start;
+      gap: 30px;
       flex-wrap: wrap;
       margin-top: 20px;
     }
-
     .img-contenedor {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 150px;
+      text-align: center;
+      flex: 1 1 150px;
+      max-width: 150px;
     }
-
     .img-contenedor img {
       width: 100%;
       border-radius: 10px;
     }
-
-    .img-contenedor p {
-      text-align: center;
-      margin-top: 5px;
+    .redes {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+      margin-top: 20px;
     }
-
-    @media (max-width: 768px) {
+    .redes a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: black;
+    }
+    .redes img {
+      width: 30px;
+      margin-right: 10px;
+    }
+    @media (max-width: 700px) {
       .container {
-        margin-top: 150px; /* dejar espacio para menú fijo */
+        flex-direction: column;
+      }
+      nav {
+        flex-direction: row;
+        justify-content: space-around;
+      }
+      nav button {
+        font-size: 14px;
+        margin: 5px 0;
       }
     }
   </style>
 </head>
 <body>
-
-  <div class="menu">
-    <a onclick="mostrarSeccion('inicio')">INICIO</a>
-    <a onclick="mostrarSeccion('viernes')">VIERNES 25</a>
-    <a onclick="mostrarSeccion('sabado')">SÁBADO 26</a>
-  </div>
-
   <div class="container">
-
-    <!-- INICIO -->
-    <section id="inicio" class="active">
-      <h1>Programa de Fiestas Santa Ana 2025</h1>
-      <h2>Brea de Aragón</h2>
-      <img src="brea.png" alt="Brea de Aragón" style="display: block; margin: 0 auto; max-width: 100%; border-radius: 10px;">
-
-      <div style="display: flex; flex-direction: column; gap: 10px; align-items: center; margin-top: 20px;">
-        <a href="https://www.instagram.com/comisiondefestejosbrea?igsh=c29yZ2NzemEwazNt" target="_blank" style="display: flex; align-items: center; text-decoration: none; color: black;">
-          <img src="instagram.PNG" alt="instagram" style="width: 30px; margin-right: 10px;">
-          <span>@comisiondefestejosbrea</span>
-        </a>
-        <a href="https://www.facebook.com/share/1Abdakovgq/?mibextid=wwXIfr" target="_blank" style="display: flex; align-items: center; text-decoration: none; color: black;">
-          <img src="facebook.PNG" alt="facebook" style="width: 30px; margin-right: 10px;">
-          <span>Comisión de festejos Brea de Aragón</span>
-        </a>
-      </div>
-
-      <footer>
-        Colaboran: Comisión de Festejos y Ayuntamiento de Brea de Aragón.<br>
-        La comisión se reserva el derecho de variar o modificar los actos programados si fuera necesario por fuerza mayor. No se hace responsable de los daños que se puedan producir a los participantes, dado el carácter voluntario de los mismos.
-      </footer>
-    </section>
-
-    <!-- VIERNES -->
-    <section id="viernes">
-      <h2>Viernes 25 de julio</h2>
-      <div class="actividad"><strong>11:45</strong> — Procesión y Misa en honor a Santa Ana.</div>
-      <div class="actividad"><strong>18:00</strong> — Apertura de la barra.</div>
-      <div class="actividad"><strong>19:00</strong> — Fiesta de la cerveza y música en directo.</div>
-
-      <div class="imagenes-viernes">
-        <div class="img-contenedor">
-          <img src="dj.png" alt="dj">
-          <p>DSEIK DJ</p>
+    <nav>
+      <button onclick="mostrarSeccion('inicio')">Inicio</button>
+      <button onclick="mostrarSeccion('viernes')">Viernes 25</button>
+      <button onclick="mostrarSeccion('sabado')">Sábado 26</button>
+    </nav>
+    <div class="content">
+      <div id="inicio" class="section active">
+        <h1>Programa de Fiestas Santa Ana 2025</h1>
+        <h2>Brea de Aragón</h2>
+        <img src="brea.png" alt="Brea de Aragón" style="display: block; margin: 0 auto; max-width: 100%; border-radius: 10px;">
+        <div class="redes">
+          <a href="https://www.instagram.com/comisiondefestejosbrea?igsh=c29yZ2NzemEwazNt" target="_blank">
+            <img src="instagram.PNG" alt="Instagram">
+            <span>@comisiondefestejosbrea</span>
+          </a>
+          <a href="https://www.facebook.com/share/1Abdakovgq/?mibextid=wwXIfr" target="_blank">
+            <img src="facebook.PNG" alt="Facebook">
+            <span>Comisión de festejos Brea de Aragón</span>
+          </a>
         </div>
-        <div class="img-contenedor">
-          <img src="vaso.png" alt="vaso">
-          <p>Vasos Personalizados</p>
+        <footer>
+          Colaboran: Comisión de Festejos y Ayuntamiento de Brea de Aragón.<br>
+          La comisión se reserva el derecho de variar o modificar los actos programados si fuera necesario por fuerza mayor. No se hace responsable de los daños que se puedan producir a los participantes, dado el carácter voluntario de los mismos.
+        </footer>
+      </div>
+
+      <div id="viernes" class="section">
+        <h2>Viernes 25 de julio</h2>
+        <div class="actividad"><strong>11:45</strong> — Procesión y Misa en honor a Santa Ana.</div>
+        <div class="actividad"><strong>18:00</strong> — Apertura de la barra.</div>
+        <div class="actividad"><strong>19:00</strong> — Fiesta de la cerveza y música en directo.</div>
+
+        <div class="imagenes-viernes">
+          <div class="img-contenedor">
+            <img src="dj.png" alt="dj">
+            <p>DSEIK DJ</p>
+          </div>
+          <div class="img-contenedor">
+            <img src="vaso.png" alt="vaso">
+            <p>Vasos Personalizados</p>
+          </div>
         </div>
+
+        <div class="actividad"><strong>21:30</strong> — Rifa benéfica.</div>
+        <div class="actividad"><strong>22:00</strong> — Rondalla del grupo de jota por las calles del pueblo.</div>
+        <div class="actividad"><strong>23:00</strong> — Actuación “MINT VALLEY” para los niños en la Plaza de España.</div>
       </div>
 
-      <div class="actividad"><strong>21:30</strong> — Rifa benéfica.</div>
-      <div class="actividad"><strong>22:00</strong> — Rondalla del grupo de jota por las calles del pueblo.</div>
-      <div class="actividad"><strong>23:00</strong> — Actuación “MINT VALLEY” para los niños en la Plaza de España.</div>
-    </section>
+      <div id="sabado" class="section">
+        <h2>Sábado 26 de julio</h2>
+        <div class="actividad"><strong>09:00</strong> — Apertura de la “II Feria de comercio y turismo contra la despoblación”.</div>
+        <div class="actividad"><strong>11:00</strong> — Juegos medievales para los niños en la Plaza de España.</div>
+        <div class="actividad"><strong>11:00</strong> — Apertura de la barra.</div>
+        <div class="actividad"><strong>12:00</strong> — Misa Mayor.</div>
+        <div class="actividad"><strong>14:30</strong> — Comida Popular.</div>
 
-    <!-- SÁBADO -->
-    <section id="sabado">
-      <h2>Sábado 26 de julio</h2>
-      <div class="actividad"><strong>09:00</strong> — Apertura de la “II Feria de comercio y turismo contra la despoblación”.</div>
-      <div class="actividad"><strong>11:00</strong> — Juegos medievales para los niños en la Plaza de España.</div>
-      <div class="actividad"><strong>11:00</strong> — Apertura de la barra.</div>
-      <div class="actividad"><strong>12:00</strong> — Misa Mayor.</div>
-      <div class="actividad"><strong>14:30</strong> — Comida Popular.</div>
+        <div class="comida">
+          <strong>Plato principal:</strong> Pollo al chilindrón con patatas<br>
+          <strong>Pan</strong><br>
+          <strong>Bebida:</strong> agua o sangría<br>
+          <strong>Postre</strong><br>
+          ✅ ¡Todo por solo 12 €!
+        </div>
 
-      <div class="comida">
-        <strong>Plato principal:</strong> Pollo al chilindrón con patatas<br>
-        <strong>Pan</strong><br>
-        <strong>Bebida:</strong> agua o sangría<br>
-        <strong>Postre</strong><br>
-        ✅ ¡Todo por solo 12 €!
+        <div class="actividad"><strong>16:30</strong> — Concurso de guiñote (10 € por pareja, premio a repartir).</div>
+        <div class="actividad"><strong>17:00</strong> — Hinchables acuáticos, mojitos en la barra y música en directo.</div>
+        <div class="actividad"><strong>19:00</strong> — Actuación del grupo Poetas de la Calle.</div>
+
+        <img src="poetas.jpg" alt="Artistas" style="display: block; margin: 20px auto; width: 300px; border-radius: 10px;">
+
+        <div class="actividad"><strong>21:30</strong> — Rifa benéfica.</div>
       </div>
-
-      <div class="actividad"><strong>16:30</strong> — Concurso de guiñote (10 € por pareja, premio a repartir).</div>
-      <div class="actividad"><strong>17:00</strong> — Hinchables acuáticos, mojitos en la barra y música en directo.</div>
-      <div class="actividad"><strong>19:00</strong> — Actuación del grupo Poetas de la Calle.</div>
-
-      <img src="poetas.jpg" alt="Artistas" style="display: block; margin: 20px auto; width: 300px; border-radius: 10px;">
-      <div class="actividad"><strong>21:30</strong> — Rifa benéfica.</div>
-    </section>
-
+    </div>
   </div>
 
   <script>
     function mostrarSeccion(id) {
-      const secciones = document.querySelectorAll("section");
-      secciones.forEach(sec => sec.classList.remove("active"));
-      document.getElementById(id).classList.add("active");
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
     }
   </script>
-
 </body>
 </html>
