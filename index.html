@@ -1,56 +1,51 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Programa Santa Ana 2025 — Brea de Aragón</title>
   <style>
     body {
       font-family: sans-serif;
       margin: 0;
       padding: 0;
-      line-height: 1.6;
       color: #333;
-      background-color: #f9f9f9;
     }
     .container {
       display: flex;
-      border: 2px solid #007BFF;
-      max-width: 900px;
-      margin: 20px auto;
-      background: white;
+      min-height: 100vh;
+      border: 2px solid #007bff;
+      box-sizing: border-box;
     }
     nav {
-      min-width: 150px;
-      background-color: #007BFF;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-    }
-    nav button {
-      background: none;
-      border: none;
+      background-color: #007bff;
       color: white;
-      margin: 10px 0;
-      font-size: 16px;
-      cursor: pointer;
-      text-align: left;
+      width: 200px;
+      padding: 20px;
+      box-sizing: border-box;
     }
-    nav button:hover {
+    nav a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      margin: 20px 0;
+    }
+    nav a:hover {
       text-decoration: underline;
     }
-    .content {
-      padding: 20px;
+    main {
       flex: 1;
+      padding: 20px;
+      box-sizing: border-box;
     }
-    .section {
+    section {
       display: none;
     }
-    .section.active {
+    section.active {
       display: block;
     }
     h1, h2 {
       text-align: center;
-      color: #007BFF;
+      color: #007bff;
     }
     .actividad {
       margin: 10px 0;
@@ -61,27 +56,24 @@
       margin-top: 10px;
     }
     footer {
-      margin-top: 30px;
+      margin-top: 50px;
       font-size: 0.9em;
       color: #666;
       text-align: center;
     }
     .imagenes-viernes {
       display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 30px;
-      flex-wrap: wrap;
-      margin-top: 20px;
+      justify-content: space-between;
+      margin: 30px 0;
     }
     .img-contenedor {
       text-align: center;
-      flex: 1 1 150px;
-      max-width: 150px;
+      width: 150px;
     }
     .img-contenedor img {
       width: 100%;
-      border-radius: 10px;
+      height: auto;
+      display: block;
     }
     .redes {
       display: flex;
@@ -100,50 +92,63 @@
       width: 30px;
       margin-right: 10px;
     }
-    @media (max-width: 700px) {
+    @media (max-width: 768px) {
       .container {
         flex-direction: column;
       }
       nav {
-        flex-direction: row;
+        width: 100%;
+        display: flex;
         justify-content: space-around;
       }
-      nav button {
-        font-size: 14px;
-        margin: 5px 0;
+      nav a {
+        margin: 10px 0;
+      }
+      .imagenes-viernes {
+        flex-direction: column;
+        align-items: center;
+      }
+      .img-contenedor {
+        margin-bottom: 20px;
       }
     }
   </style>
 </head>
 <body>
+
   <div class="container">
     <nav>
-      <button onclick="mostrarSeccion('inicio')">Inicio</button>
-      <button onclick="mostrarSeccion('viernes')">Viernes 25</button>
-      <button onclick="mostrarSeccion('sabado')">Sábado 26</button>
+      <a href="#" onclick="mostrarSeccion('inicio')">Inicio</a>
+      <a href="#" onclick="mostrarSeccion('viernes')">Viernes 25</a>
+      <a href="#" onclick="mostrarSeccion('sabado')">Sábado 26</a>
     </nav>
-    <div class="content">
-      <div id="inicio" class="section active">
+
+    <main>
+      <!-- INICIO -->
+      <section id="inicio" class="active">
         <h1>Programa de Fiestas Santa Ana 2025</h1>
         <h2>Brea de Aragón</h2>
-        <img src="brea.png" alt="Brea de Aragón" style="display: block; margin: 0 auto; max-width: 100%; border-radius: 10px;">
+        <img src="brea.png" alt="Brea de Aragón" style="display: block; margin: 0 auto; max-width: 100%;">
+        
         <div class="redes">
           <a href="https://www.instagram.com/comisiondefestejosbrea?igsh=c29yZ2NzemEwazNt" target="_blank">
-            <img src="instagram.PNG" alt="Instagram">
+            <img src="instagram.PNG" alt="instagram">
             <span>@comisiondefestejosbrea</span>
           </a>
           <a href="https://www.facebook.com/share/1Abdakovgq/?mibextid=wwXIfr" target="_blank">
-            <img src="facebook.PNG" alt="Facebook">
+            <img src="facebook.PNG" alt="facebook">
             <span>Comisión de festejos Brea de Aragón</span>
           </a>
         </div>
+
         <footer>
           Colaboran: Comisión de Festejos y Ayuntamiento de Brea de Aragón.<br>
           La comisión se reserva el derecho de variar o modificar los actos programados si fuera necesario por fuerza mayor. No se hace responsable de los daños que se puedan producir a los participantes, dado el carácter voluntario de los mismos.
         </footer>
-      </div>
+      </section>
 
-      <div id="viernes" class="section">
+      <!-- VIERNES -->
+      <section id="viernes">
         <h2>Viernes 25 de julio</h2>
         <div class="actividad"><strong>11:45</strong> — Procesión y Misa en honor a Santa Ana.</div>
         <div class="actividad"><strong>18:00</strong> — Apertura de la barra.</div>
@@ -156,16 +161,17 @@
           </div>
           <div class="img-contenedor">
             <img src="vaso.png" alt="vaso">
-            <p>Vasos Personalizados</p>
+            <p>Vasos<br>Personalizados</p>
           </div>
         </div>
 
         <div class="actividad"><strong>21:30</strong> — Rifa benéfica.</div>
         <div class="actividad"><strong>22:00</strong> — Rondalla del grupo de jota por las calles del pueblo.</div>
         <div class="actividad"><strong>23:00</strong> — Actuación “MINT VALLEY” para los niños en la Plaza de España.</div>
-      </div>
+      </section>
 
-      <div id="sabado" class="section">
+      <!-- SÁBADO -->
+      <section id="sabado">
         <h2>Sábado 26 de julio</h2>
         <div class="actividad"><strong>09:00</strong> — Apertura de la “II Feria de comercio y turismo contra la despoblación”.</div>
         <div class="actividad"><strong>11:00</strong> — Juegos medievales para los niños en la Plaza de España.</div>
@@ -184,22 +190,20 @@
         <div class="actividad"><strong>16:30</strong> — Concurso de guiñote (10 € por pareja, premio a repartir).</div>
         <div class="actividad"><strong>17:00</strong> — Hinchables acuáticos, mojitos en la barra y música en directo.</div>
         <div class="actividad"><strong>19:00</strong> — Actuación del grupo Poetas de la Calle.</div>
-
-        <img src="poetas.jpg" alt="Artistas" style="display: block; margin: 20px auto; width: 300px; border-radius: 10px;">
+        
+        <img src="poetas.jpg" alt="Artistas" style="display: block; margin: 20px auto; width: 300px;">
 
         <div class="actividad"><strong>21:30</strong> — Rifa benéfica.</div>
-      </div>
-    </div>
+      </section>
+    </main>
   </div>
 
   <script>
     function mostrarSeccion(id) {
-      const sections = document.querySelectorAll('.section');
-      sections.forEach(section => {
-        section.classList.remove('active');
-      });
+      document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
       document.getElementById(id).classList.add('active');
     }
   </script>
+
 </body>
 </html>
