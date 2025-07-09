@@ -13,9 +13,9 @@
 
     .container {
       max-width: 800px;
-      margin: 20px auto;
+      margin: 100px auto 20px auto;
       background-color: #fff;
-      border: 5px solid #ff6600;
+      border: 5px solid #0077cc; /* azul */
       border-radius: 20px;
       box-shadow: 0 0 20px rgba(0,0,0,0.1);
       padding: 20px;
@@ -40,32 +40,35 @@
 
     .menu {
       position: fixed;
-      top: 50px;
-      left: 20px;
+      top: 0;
+      left: 0;
+      width: 100%;
       background-color: #fff;
-      border: 2px solid #ff6600;
-      border-radius: 10px;
-      padding: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      border-bottom: 3px solid #0077cc;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+      z-index: 999;
     }
 
     .menu a {
-      display: block;
-      margin-bottom: 10px;
+      margin: 0 15px;
       text-decoration: none;
-      color: #ff6600;
+      color: #0077cc;
       font-weight: bold;
-      transition: color 0.3s;
+      transition: color 0.3s, border-bottom 0.3s;
       cursor: pointer;
+      border-bottom: 2px solid transparent;
     }
 
     .menu a:hover {
-      color: #cc5200;
+      border-bottom: 2px solid #0077cc;
     }
 
     section {
       display: none;
     }
+
     section.active {
       display: block;
     }
@@ -77,22 +80,23 @@
       text-align: center;
     }
 
-    /* Estilos responsive */
+    /* Ajustes para imágenes del viernes */
+    .img-viernes {
+      width: 150px;
+      margin: 0 auto;
+      display: block;
+      border-radius: 10px;
+    }
+
+    .img-texto {
+      text-align: center;
+      margin-top: 5px;
+      margin-bottom: 20px;
+    }
+
     @media (max-width: 768px) {
-      .menu {
-        position: static;
-        display: flex;
-        justify-content: center;
-        margin-bottom: 20px;
-        border: none;
-        box-shadow: none;
-      }
-      .menu a {
-        margin: 0 10px;
-        border-bottom: 2px solid transparent;
-      }
-      .menu a:hover {
-        border-bottom: 2px solid #ff6600;
+      .container {
+        margin-top: 150px; /* dejar espacio para menú fijo */
       }
     }
   </style>
@@ -137,14 +141,14 @@
       <div class="actividad"><strong>18:00</strong> — Apertura de la barra.</div>
       <div class="actividad"><strong>19:00</strong> — Fiesta de la cerveza y música en directo.</div>
 
-      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-        <div style="text-align: center; width: 45%; margin-bottom: 20px;">
-          <img src="dj.png" alt="dj" style="width: 100%; border-radius: 10px;">
-          <p>DSEIK DJ</p>
+      <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 30px;">
+        <div style="text-align: center;">
+          <img src="dj.png" alt="dj" class="img-viernes">
+          <p class="img-texto">DSEIK DJ</p>
         </div>
-        <div style="text-align: center; width: 45%; margin-bottom: 20px;">
-          <img src="vaso.png" alt="vaso" style="width: 100%; border-radius: 10px;">
-          <p>Vasos Personalizados</p>
+        <div style="text-align: center;">
+          <img src="vaso.png" alt="vaso" class="img-viernes">
+          <p class="img-texto">Vasos Personalizados</p>
         </div>
       </div>
 
