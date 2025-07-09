@@ -80,18 +80,29 @@
       text-align: center;
     }
 
-    /* Ajustes para imágenes del viernes */
-    .img-viernes {
+    .imagenes-viernes {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .img-contenedor {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       width: 150px;
-      margin: 0 auto;
-      display: block;
+    }
+
+    .img-contenedor img {
+      width: 100%;
       border-radius: 10px;
     }
 
-    .img-texto {
+    .img-contenedor p {
       text-align: center;
       margin-top: 5px;
-      margin-bottom: 20px;
     }
 
     @media (max-width: 768px) {
@@ -141,14 +152,14 @@
       <div class="actividad"><strong>18:00</strong> — Apertura de la barra.</div>
       <div class="actividad"><strong>19:00</strong> — Fiesta de la cerveza y música en directo.</div>
 
-      <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 30px;">
-        <div style="text-align: center;">
-          <img src="dj.png" alt="dj" class="img-viernes">
-          <p class="img-texto">DSEIK DJ</p>
+      <div class="imagenes-viernes">
+        <div class="img-contenedor">
+          <img src="dj.png" alt="dj">
+          <p>DSEIK DJ</p>
         </div>
-        <div style="text-align: center;">
-          <img src="vaso.png" alt="vaso" class="img-viernes">
-          <p class="img-texto">Vasos Personalizados</p>
+        <div class="img-contenedor">
+          <img src="vaso.png" alt="vaso">
+          <p>Vasos Personalizados</p>
         </div>
       </div>
 
