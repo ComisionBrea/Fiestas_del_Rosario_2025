@@ -77,27 +77,6 @@
       height: auto;
       display: block;
     }
-    .img-contenedor p {
-      height: 40px; /* 🔧 Forzamos la misma altura en el texto para alinear */
-      margin: 5px 0 0 0;
-    }
-    .redes {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      align-items: center;
-      margin-top: 20px;
-    }
-    .redes a {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-      color: black;
-    }
-    .redes img {
-      width: 30px;
-      margin-right: 10px;
-    }
     @media (max-width: 768px) {
       .container {
         flex-direction: column;
@@ -113,9 +92,6 @@
       .imagenes-viernes {
         flex-direction: column;
         align-items: center;
-      }
-      .img-contenedor p {
-        height: auto; /* En móvil, dejamos altura libre para evitar huecos raros */
       }
     }
   </style>
@@ -138,11 +114,11 @@
         
         <div class="redes">
           <a href="https://www.instagram.com/comisiondefestejosbrea?igsh=c29yZ2NzemEwazNt" target="_blank">
-            <img src="instagram.PNG" alt="instagram">
+            <img src="instagram.PNG" alt="instagram" style="width: 30px; margin-right: 10px;">
             <span>@comisiondefestejosbrea</span>
           </a>
           <a href="https://www.facebook.com/share/1Abdakovgq/?mibextid=wwXIfr" target="_blank">
-            <img src="facebook.PNG" alt="facebook">
+            <img src="facebook.PNG" alt="facebook" style="width: 30px; margin-right: 10px;">
             <span>Comisión de festejos Brea de Aragón</span>
           </a>
         </div>
@@ -163,11 +139,9 @@
         <div class="imagenes-viernes">
           <div class="img-contenedor">
             <img src="dj.png" alt="dj">
-            <p>DSEIK DJ</p>
           </div>
           <div class="img-contenedor">
             <img src="vaso.png" alt="vaso">
-            <p>Vasos<br>Personalizados</p>
           </div>
         </div>
 
