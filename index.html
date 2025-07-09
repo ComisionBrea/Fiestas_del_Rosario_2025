@@ -6,152 +6,184 @@
   <style>
     body {
       font-family: sans-serif;
-      max-width: 800px;
-      margin: auto;
-      padding: 20px;
-      line-height: 1.6;
-      color: #333;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
     }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      background-color: #fff;
+      border: 5px solid #ff6600;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
     h1, h2 {
       text-align: center;
+      margin-top: 0;
     }
+
     .actividad {
       margin: 10px 0;
     }
+
     .comida {
       background-color: #f2f2f2;
       padding: 10px;
       margin-top: 10px;
+      border-radius: 10px;
     }
-    /* Menú lateral */
+
     .menu {
       position: fixed;
       top: 50px;
       left: 20px;
-      background-color: #f2f2f2;
-      padding: 15px;
+      background-color: #fff;
+      border: 2px solid #ff6600;
       border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     }
+
     .menu a {
       display: block;
       margin-bottom: 10px;
       text-decoration: none;
-      color: #333;
+      color: #ff6600;
       font-weight: bold;
       transition: color 0.3s;
       cursor: pointer;
     }
+
     .menu a:hover {
-      color: #ff6600;
+      color: #cc5200;
     }
+
     section {
       display: none;
     }
     section.active {
       display: block;
     }
+
     footer {
-      margin-top: 50px;
+      margin-top: 30px;
       font-size: 0.9em;
       color: #666;
       text-align: center;
+    }
+
+    /* Estilos responsive */
+    @media (max-width: 768px) {
+      .menu {
+        position: static;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        border: none;
+        box-shadow: none;
+      }
+      .menu a {
+        margin: 0 10px;
+        border-bottom: 2px solid transparent;
+      }
+      .menu a:hover {
+        border-bottom: 2px solid #ff6600;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Menú lateral -->
   <div class="menu">
     <a onclick="mostrarSeccion('inicio')">INICIO</a>
     <a onclick="mostrarSeccion('viernes')">VIERNES 25</a>
     <a onclick="mostrarSeccion('sabado')">SÁBADO 26</a>
   </div>
 
-  <!-- Sección INICIO -->
-  <section id="inicio" class="active">
-    <h1>Programa de Fiestas Santa Ana 2025</h1>
-    <h2>Brea de Aragón</h2>
-    <img src="brea.png" alt="Brea de Aragón" style="display: block; margin: 0 auto; max-width: 100%;">
+  <div class="container">
 
-    <div style="display: flex; flex-direction: column; gap: 10px; align-items: center; margin-top: 20px;">
-      <!-- Instagram -->
-      <a href="https://www.instagram.com/comisiondefestejosbrea?igsh=c29yZ2NzemEwazNt" target="_blank" style="display: flex; align-items: center; text-decoration: none; color: black;">
-        <img src="instagram.PNG" alt="instagram" style="width: 30px; margin-right: 10px;">
-        <span>@comisiondefestejosbrea</span>
-      </a>
+    <!-- INICIO -->
+    <section id="inicio" class="active">
+      <h1>Programa de Fiestas Santa Ana 2025</h1>
+      <h2>Brea de Aragón</h2>
+      <img src="brea.png" alt="Brea de Aragón" style="display: block; margin: 0 auto; max-width: 100%; border-radius: 10px;">
 
-      <!-- Facebook -->
-      <a href="https://www.facebook.com/share/1Abdakovgq/?mibextid=wwXIfr" target="_blank" style="display: flex; align-items: center; text-decoration: none; color: black;">
-        <img src="facebook.PNG" alt="facebook" style="width: 30px; margin-right: 10px;">
-        <span>Comisión de festejos Brea de Aragón</span>
-      </a>
-    </div>
-
-    <footer>
-      Colaboran: Comisión de Festejos y Ayuntamiento de Brea de Aragón.<br>
-      La comisión se reserva el derecho de variar o modificar los actos programados si fuera necesario por fuerza mayor. No se hace responsable de los daños que se puedan producir a los participantes, dado el carácter voluntario de los mismos.
-    </footer>
-  </section>
-
-  <!-- Sección VIERNES -->
-  <section id="viernes">
-    <h2>Viernes 25 de julio</h2>
-    <div class="actividad"><strong>11:45</strong> — Procesión y Misa en honor a Santa Ana.</div>
-    <div class="actividad"><strong>18:00</strong> — Apertura de la barra.</div>
-    <div class="actividad"><strong>19:00</strong> — Fiesta de la cerveza y música en directo.</div>
-
-    <div style="display: flex; justify-content: space-between; align-items: center;">
-      <div style="text-align: center; width: 35%;">
-        <img src="dj.png" alt="dj" style="width: 100%;">
-        <p>DSEIK DJ</p>
+      <div style="display: flex; flex-direction: column; gap: 10px; align-items: center; margin-top: 20px;">
+        <a href="https://www.instagram.com/comisiondefestejosbrea?igsh=c29yZ2NzemEwazNt" target="_blank" style="display: flex; align-items: center; text-decoration: none; color: black;">
+          <img src="instagram.PNG" alt="instagram" style="width: 30px; margin-right: 10px;">
+          <span>@comisiondefestejosbrea</span>
+        </a>
+        <a href="https://www.facebook.com/share/1Abdakovgq/?mibextid=wwXIfr" target="_blank" style="display: flex; align-items: center; text-decoration: none; color: black;">
+          <img src="facebook.PNG" alt="facebook" style="width: 30px; margin-right: 10px;">
+          <span>Comisión de festejos Brea de Aragón</span>
+        </a>
       </div>
-      <div style="text-align: center; width: 25%;">
-        <img src="vaso.png" alt="vaso" style="width: 100%;">
-        <p>Vasos Personalizados</p>
+
+      <footer>
+        Colaboran: Comisión de Festejos y Ayuntamiento de Brea de Aragón.<br>
+        La comisión se reserva el derecho de variar o modificar los actos programados si fuera necesario por fuerza mayor. No se hace responsable de los daños que se puedan producir a los participantes, dado el carácter voluntario de los mismos.
+      </footer>
+    </section>
+
+    <!-- VIERNES -->
+    <section id="viernes">
+      <h2>Viernes 25 de julio</h2>
+      <div class="actividad"><strong>11:45</strong> — Procesión y Misa en honor a Santa Ana.</div>
+      <div class="actividad"><strong>18:00</strong> — Apertura de la barra.</div>
+      <div class="actividad"><strong>19:00</strong> — Fiesta de la cerveza y música en directo.</div>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+        <div style="text-align: center; width: 45%; margin-bottom: 20px;">
+          <img src="dj.png" alt="dj" style="width: 100%; border-radius: 10px;">
+          <p>DSEIK DJ</p>
+        </div>
+        <div style="text-align: center; width: 45%; margin-bottom: 20px;">
+          <img src="vaso.png" alt="vaso" style="width: 100%; border-radius: 10px;">
+          <p>Vasos Personalizados</p>
+        </div>
       </div>
-    </div>
 
-    <div style="clear: both;"></div>
+      <div class="actividad"><strong>21:30</strong> — Rifa benéfica.</div>
+      <div class="actividad"><strong>22:00</strong> — Rondalla del grupo de jota por las calles del pueblo.</div>
+      <div class="actividad"><strong>23:00</strong> — Actuación “MINT VALLEY” para los niños en la Plaza de España.</div>
+    </section>
 
-    <div class="actividad"><strong>21:30</strong> — Rifa benéfica.</div>
-    <div class="actividad"><strong>22:00</strong> — Rondalla del grupo de jota por las calles del pueblo.</div>
-    <div class="actividad"><strong>23:00</strong> — Actuación “MINT VALLEY” para los niños en la Plaza de España.</div>
-  </section>
+    <!-- SÁBADO -->
+    <section id="sabado">
+      <h2>Sábado 26 de julio</h2>
+      <div class="actividad"><strong>09:00</strong> — Apertura de la “II Feria de comercio y turismo contra la despoblación”.</div>
+      <div class="actividad"><strong>11:00</strong> — Juegos medievales para los niños en la Plaza de España.</div>
+      <div class="actividad"><strong>11:00</strong> — Apertura de la barra.</div>
+      <div class="actividad"><strong>12:00</strong> — Misa Mayor.</div>
+      <div class="actividad"><strong>14:30</strong> — Comida Popular.</div>
 
-  <!-- Sección SÁBADO -->
-  <section id="sabado">
-    <h2>Sábado 26 de julio</h2>
-    <div class="actividad"><strong>09:00</strong> — Apertura de la “II Feria de comercio y turismo contra la despoblación”.</div>
-    <div class="actividad"><strong>11:00</strong> — Juegos medievales para los niños en la Plaza de España.</div>
-    <div class="actividad"><strong>11:00</strong> — Apertura de la barra.</div>
-    <div class="actividad"><strong>12:00</strong> — Misa Mayor.</div>
-    <div class="actividad"><strong>14:30</strong> — Comida Popular.</div>
+      <div class="comida">
+        <strong>Plato principal:</strong> Pollo al chilindrón con patatas<br>
+        <strong>Pan</strong><br>
+        <strong>Bebida:</strong> agua o sangría<br>
+        <strong>Postre</strong><br>
+        ✅ ¡Todo por solo 12 €!
+      </div>
 
-    <div class="comida">
-      <strong>Plato principal:</strong> Pollo al chilindrón con patatas<br>
-      <strong>Pan</strong><br>
-      <strong>Bebida:</strong> agua o sangría<br>
-      <strong>Postre</strong><br>
-      ✅ ¡Todo por solo 12 €!
-    </div>
+      <div class="actividad"><strong>16:30</strong> — Concurso de guiñote (10 € por pareja, premio a repartir).</div>
+      <div class="actividad"><strong>17:00</strong> — Hinchables acuáticos, mojitos en la barra y música en directo.</div>
+      <div class="actividad"><strong>19:00</strong> — Actuación del grupo Poetas de la Calle.</div>
 
-    <div class="actividad"><strong>16:30</strong> — Concurso de guiñote (10 € por pareja, premio a repartir).</div>
-    <div class="actividad"><strong>17:00</strong> — Hinchables acuáticos, mojitos en la barra y música en directo.</div>
-    <div class="actividad"><strong>19:00</strong> — Actuación del grupo Poetas de la Calle.</div>
+      <img src="poetas.jpg" alt="Artistas" style="display: block; margin: 20px auto; width: 300px; border-radius: 10px;">
+      <div class="actividad"><strong>21:30</strong> — Rifa benéfica.</div>
+    </section>
 
-    <img src="poetas.jpg" alt="Artistas" style="display: block; margin: 20px auto; width: 300px;">
-    <br>
-    <div class="actividad"><strong>21:30</strong> — Rifa benéfica.</div>
-  </section>
+  </div>
 
   <script>
     function mostrarSeccion(id) {
-      // Ocultar todas
       const secciones = document.querySelectorAll("section");
       secciones.forEach(sec => sec.classList.remove("active"));
-
-      // Mostrar la seleccionada
       document.getElementById(id).classList.add("active");
     }
   </script>
