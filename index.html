@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Programa Santa Ana 2025 — Brea de Aragón</title>
+  <title>Fiestas Brea 2025</title>
   <style>
     body {
       font-family: sans-serif;
@@ -19,15 +19,16 @@
     nav {
       background-color: #007bff;
       color: white;
-      width: 200px;
+      width: 220px;
       padding: 20px;
       box-sizing: border-box;
+      overflow-y: auto;
     }
     nav a {
       color: white;
       text-decoration: none;
       display: block;
-      margin: 20px 0;
+      margin: 10px 0;
     }
     nav a:hover {
       text-decoration: underline;
@@ -36,6 +37,7 @@
       flex: 1;
       padding: 20px;
       box-sizing: border-box;
+      overflow-y: auto;
     }
     section {
       display: none;
@@ -54,29 +56,13 @@
       background-color: #f2f2f2;
       padding: 10px;
       margin-top: 10px;
+      border-radius: 5px;
     }
     footer {
       margin-top: 50px;
       font-size: 0.9em;
       color: #666;
       text-align: center;
-    }
-    .imagenes-viernes {
-      display: flex;
-      justify-content: left;
-      gap: 50px;
-      flex-wrap: wrap;
-      margin: 20px 0;
-      align-items: flex-end;
-    }
-    .img-contenedor {
-      text-align: center;
-      max-width: 150px;
-    }
-    .img-contenedor img {
-      width: 100%;
-      height: auto;
-      display: block;
     }
     .redes {
       display: flex;
@@ -112,92 +98,166 @@
 </head>
 <body>
 
-  <div class="container">
-    <nav>
-      <a href="#" onclick="mostrarSeccion('inicio')">Inicio</a>
-      <a href="#" onclick="mostrarSeccion('viernes')">Viernes 25</a>
-      <a href="#" onclick="mostrarSeccion('sabado')">Sábado 26</a>
-    </nav>
+<div class="container">
+  <nav>
+    <a href="#" onclick="mostrarSeccion('inicio')">Inicio</a>
+    <a href="#" onclick="mostrarSeccion('4oct')">Sábado 4</a>
+    <a href="#" onclick="mostrarSeccion('5oct')">Domingo 5</a>
+    <a href="#" onclick="mostrarSeccion('6oct')">Lunes 6</a>
+    <a href="#" onclick="mostrarSeccion('7oct')">Martes 7</a>
+    <a href="#" onclick="mostrarSeccion('8oct')">Miércoles 8</a>
+    <a href="#" onclick="mostrarSeccion('9oct')">Jueves 9</a>
+    <a href="#" onclick="mostrarSeccion('10oct')">Viernes 10</a>
+    <a href="#" onclick="mostrarSeccion('11oct')">Sábado 11</a>
+    <a href="#" onclick="mostrarSeccion('12oct')">Domingo 12</a>
+  </nav>
 
-    <main>
-      <!-- INICIO -->
-      <section id="inicio" class="active">
-        <h1>Programa de Fiestas Santa Ana 2025</h1>
-        <h2>Brea de Aragón</h2>
-        <img src="brea.png" alt="Brea de Aragón" style="display: block; margin: 0 auto; max-width: 100%;">
-        
-        <div class="redes">
-          <a href="https://www.instagram.com/comisiondefestejosbrea?igsh=c29yZ2NzemEwazNt" target="_blank">
-            <img src="instagram.PNG" alt="instagram">
-            <span>@comisiondefestejosbrea</span>
-          </a>
-          <a href="https://www.facebook.com/share/1Abdakovgq/?mibextid=wwXIfr" target="_blank">
-            <img src="facebook.PNG" alt="facebook">
-            <span>Comisión de festejos Brea de Aragón</span>
-          </a>
-        </div>
+  <main>
+    <!-- INICIO -->
+    <section id="inicio" class="active">
+      <h1>Fiestas Brea de Aragón 2025</h1>
+      <h2>Programa completo</h2>
+      <img src="brea.png" alt="Brea de Aragón" style="display: block; margin: 0 auto; max-width: 100%;">
 
-        <footer>
-          Colaboran: Comisión de Festejos y Ayuntamiento de Brea de Aragón.<br>
-          La comisión se reserva el derecho de variar o modificar los actos programados si fuera necesario por fuerza mayor. No se hace responsable de los daños que se puedan producir a los participantes, dado el carácter voluntario de los mismos.
-        </footer>
-      </section>
+      <div class="redes">
+        <a href="https://www.instagram.com/comisiondefestejosbrea" target="_blank">
+          <img src="instagram.png" alt="Instagram">
+          <span>@comisiondefestejosbrea</span>
+        </a>
+        <a href="https://www.facebook.com/comisiondefestejosbrea" target="_blank">
+          <img src="facebook.png" alt="Facebook">
+          <span>Comisión de Festejos Brea de Aragón</span>
+        </a>
+      </div>
 
-      <!-- VIERNES -->
-      <section id="viernes">
-        <h2>Viernes 25 de julio</h2>
-        <div class="actividad"><strong>11:45</strong> — Procesión y Misa en honor a Santa Ana.</div>
-        <div class="actividad"><strong>18:00</strong> — Apertura de la barra.</div>
-        <div class="actividad"><strong>19:00</strong> — Fiesta de la cerveza y música en directo.</div>
+      <footer>
+        Organiza: Comisión de Festejos y Ayuntamiento de Brea de Aragón.<br>
+        Programa sujeto a cambios por fuerza mayor.
+      </footer>
+    </section>
 
-        <div class="imagenes-viernes">
-          <div class="img-contenedor">
-            <img src="dj.png" alt="dj">
-          </div>
-          <div class="img-contenedor">
-            <img src="vaso.png" alt="vaso">
-          </div>
-        </div>
+    <!-- SÁBADO 4 OCTUBRE -->
+    <section id="4oct">
+      <h2>Sábado 4 de Octubre 2025 — “Primer Cartucho”</h2>
+      <div class="actividad"><strong>12:00</strong> — ¡Vamos Brean@s! Todos a correr los primeros cabezudos acompañados de la CHARANGA ABLITAS.</div>
+      <div class="actividad"><strong>15:30</strong> — Chupinazo con la PEÑA EL CHUPINAZO y pancartas de peñas recorriendo el pueblo.</div>
+      <div class="actividad"><strong>18:00</strong> — Paseíllo de adoración a la Virgen del Rosario y ofrenda floral.</div>
+      <div class="actividad"><strong>19:30</strong> — Solemnes completas en honor a la Virgen del Rosario.</div>
+      <div class="actividad"><strong>23:30</strong> — Inauguración de verbenas con hoguera y charanga.</div>
+      <div class="actividad"><strong>01:15</strong> — Orquesta MAGIA NEGRA, DISCOMÓVIL y DJ HUGO VALERO.</div>
+    </section>
 
-        <div class="actividad"><strong>21:30</strong> — Rifa benéfica.</div>
-        <div class="actividad"><strong>22:00</strong> — Rondalla del grupo de jota por las calles del pueblo.</div>
-      </section>
+    <!-- DOMINGO 5 OCTUBRE -->
+    <section id="5oct">
+      <h2>Domingo 5 de Octubre 2025 — “Día de la Virgen del Rosario”</h2>
+      <div class="actividad"><strong>08:10</strong> — Rosario de la Aurora.</div>
+      <div class="actividad"><strong>08:30</strong> — Misa primera.</div>
+      <div class="actividad"><strong>11:30</strong> — Misa Mayor en honor a la Virgen del Rosario.</div>
+      <div class="actividad"><strong>16:00</strong> — Partido CD BREA – UNIÓN DEPORTIVA SAN JOSE en PIEDRABUENA.</div>
+      <div class="actividad"><strong>19:30</strong> — Rosario general por el pueblo con la Banda Municipal.</div>
+      <div class="actividad"><strong>23:30</strong> — Verbena en Plaza España.</div>
+      <div class="actividad"><strong>01:15</strong> — Orquesta NUEVA ALASKA y DISCOMÓVIL con DSEIK DJ.</div>
+    </section>
 
-      <!-- SÁBADO -->
-      <section id="sabado">
-        <h2>Sábado 26 de julio</h2>
-        <div class="actividad"><strong>09:00</strong> — Apertura de la “II Feria de comercio y turismo contra la despoblación”.</div>
-        <div class="actividad"><strong>11:00</strong> — Juegos medievales para los niños en la Plaza de España.</div>
-        <div class="actividad"><strong>11:00</strong> — Apertura de la barra.</div>
-        <div class="actividad"><strong>12:00</strong> — Misa Mayor.</div>
-        <div class="actividad"><strong>14:30</strong> — Comida Popular.</div>
+    <!-- LUNES 6 OCTUBRE -->
+    <section id="6oct">
+      <h2>Lunes 6 de Octubre 2025 — “Que no decaiga”</h2>
+      <div class="actividad"><strong>06:30</strong> — Pasacalles con CHARANGA ABLITAS y almuerzo con chocolate.</div>
+      <div class="actividad"><strong>08:00</strong> — Primer encierro a cargo de GANADERÍA BARQUERO (Quinto), seguido de becerras en la plaza.</div>
+      <div class="actividad"><strong>11:00</strong> — Misa de difuntos.</div>
+      <div class="actividad"><strong>16:00</strong> — Búsqueda de majas acompañados de la charanga.</div>
+      <div class="actividad"><strong>17:00</strong> — Primera suelta de vacas GANADERÍA HNOS MARCÉN (Villanueva de Gállego) con pausa para bocadillos.</div>
+      <div class="actividad"><strong>19:00</strong> — Gran rifa benéfica.</div>
+      <div class="actividad"><strong>23:30</strong> — Verbena en la Pasarela.</div>
+      <div class="actividad"><strong>01:00</strong> — Música en la zona del Barranco con DJ RODRI.</div>
+    </section>
 
-        <div class="comida">
-          <strong>Plato principal:</strong> Pollo al chilindrón con patatas<br>
-          <strong>Pan</strong><br>
-          <strong>Bebida:</strong> agua o sangría<br>
-          <strong>Postre</strong><br>
-          ✅ ¡Todo por solo 12 €!
-        </div>
+    <!-- Martes 7 Octubre -->
+    <section id="7oct">
+      <h2>Martes 7 de Octubre 2025 — “Ellos al mando… por un día”</h2>
+      <div class="actividad"><strong>11:00</strong> — Santa Misa.</div>
+      <div class="actividad"><strong>12:00</strong> — VAMOS MACHOTES! Salida desde la plaza a PEÑA EL PACHARAN para aperitivo.</div>
+      <div class="actividad"><strong>12:30</strong> — Vermú Torero por los bares del pueblo.</div>
+      <div class="actividad"><strong>17:00</strong> — Sesión de vacas GANADERÍA RAÚL IZQUIERDO (Codo).</div>
+      <div class="actividad"><strong>19:00</strong> — Rifa benéfica.</div>
+      <div class="actividad"><strong>23:30</strong> — Suelta de burros estilo oeste en Plaza España.</div>
+      <div class="actividad"><strong>01:00</strong> — Ruta de bares con charanga.</div>
+    </section>
 
-        <div class="actividad"><strong>16:30</strong> — Concurso de guiñote (10 € por pareja, premio a repartir).</div>
-        <div class="actividad"><strong>17:00</strong> — Hinchables acuáticos, mojitos en la barra y música en directo.</div>
-        <div class="actividad"><strong>19:00</strong> — Actuación del grupo Poetas de la Calle.</div>
-        
-        <img src="poetas.jpg" alt="Artistas" style="display: block; margin: 20px auto; width: 300px;">
+    <!-- Miércoles 8 Octubre -->
+    <section id="8oct">
+      <h2>Miércoles 8 de Octubre 2025 — “Reinas de la fiesta”</h2>
+      <div class="actividad"><strong>12:00</strong> — Misa mayor en honor a todas las mujeres Breanas y aperitivo.</div>
+      <div class="actividad"><strong>14:00</strong> — Comida de la mujer Breana en el pabellón.</div>
+      <div class="actividad"><strong>16:30</strong> — Paseíllo por la plaza con la charanga.</div>
+      <div class="actividad"><strong>17:00</strong> — Gran Prix y suelta de vacas GANADERÍA JAVIER SORIA (Longares) con bocadillos.</div>
+      <div class="actividad"><strong>19:00</strong> — Rifa benéfica.</div>
+      <div class="actividad"><strong>23:30</strong> — Verbena y Baile del Farolillo.</div>
+      <div class="actividad"><strong>01:15</strong> — Actuación de “Los Chalanes” flamenco.</div>
+    </section>
 
-        <div class="actividad"><strong>21:30</strong> — Rifa benéfica.</div>
-        <div class="actividad"><strong>23:00</strong> — Actuación “MINT VALLEY” para los niños en la Plaza de España.</div>
-      </section>
-    </main>
-  </div>
+    <!-- Jueves 9 Octubre -->
+    <section id="9oct">
+      <h2>Jueves 9 de Octubre 2025 — “Pasión por la peña”</h2>
+      <div class="actividad"><strong>11:00</strong> — Santa Misa.</div>
+      <div class="actividad"><strong>11:30</strong> — Cabezudos infantiles con charanga.</div>
+      <div class="actividad"><strong>12:30</strong> — Preparativos para cocinar los ranchos de las peñas.</div>
+      <div class="actividad"><strong>17:00</strong> — Juegos tradicionales en la plaza.</div>
+      <div class="actividad"><strong>19:00</strong> — Actuación LETICIA SABATER.</div>
+      <div class="actividad"><strong>20:30</strong> — Rifa benéfica.</div>
+      <div class="actividad"><strong>21:00</strong> — Reparto de la vaca en la puerta de la Iglesia.</div>
+      <div class="actividad"><strong>00:30</strong> — Recorrido por las calles con DJ ALEX.</div>
+      <div class="actividad"><strong>02:00</strong> — Concierto GRUPO “VERSOPOTAMIA” + DISCOMÓVIL DJ J.VELILLA.</div>
+    </section>
 
-  <script>
-    function mostrarSeccion(id) {
-      document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
-    }
-  </script>
+    <!-- CONTINUACIÓN DEL HTML ANTERIOR -->
+
+    <!-- VIERNES 10 OCTUBRE -->
+    <section id="10oct">
+      <h2>Viernes 10 de Octubre 2025 — “Pequeños, pero fiesteros”</h2>
+      <div class="actividad"><strong>11:00</strong> — Santa Misa.</div>
+      <div class="actividad"><strong>12:30</strong> — Encierro infantil a cargo de GANADERÍA LA ESTANCA (TAUSTE).</div>
+      <div class="actividad"><strong>14:00</strong> — Bocadillos en el pabellón.</div>
+      <div class="actividad"><strong>14:30</strong> — Hinchables para los más pequeños (PARQUE INFANTIL PITUFILANDIA).</div>
+      <div class="actividad"><strong>16:30</strong> — Salida para buscar a los majicos a la PEÑA STRAGOS.</div>
+      <div class="actividad"><strong>17:00</strong> — Suelta de vacas GANADERÍA EL RUISEÑOR (Frescano).</div>
+      <div class="actividad"><strong>19:00</strong> — Rifa benéfica.</div>
+      <div class="actividad"><strong>00:00</strong> — Primer TORO DE RONDA en Plaza España por EMBOLADORES DE SANTA PANTARIA y suelta de vacas GANADERÍA EL RUISEÑOR.</div>
+      <div class="actividad"><strong>01:15</strong> — Música en el pabellón con COPACABANA y DISCOMÓVIL (DJ ZAKA y DJ RODRI).</div>
+    </section>
+
+    <!-- SÁBADO 11 OCTUBRE -->
+    <section id="11oct">
+      <h2>Sábado 11 de Octubre 2025 — “¡Aguanta, que ya queda poco!”</h2>
+      <div class="actividad"><strong>06:30</strong> — Pasacalles con CHARANGA ABLITAS y desayuno en la plaza.</div>
+      <div class="actividad"><strong>08:00</strong> — Último encierro GANADERÍA BARQUERO (Quinto) y suelta de becerras.</div>
+      <div class="actividad"><strong>16:00</strong> — Búsqueda de las majas acompañados de la charanga.</div>
+      <div class="actividad"><strong>17:00</strong> — Penúltima suelta de vaquillas GANADERÍA OLIVA ESCUDERO (Quinto).</div>
+      <div class="actividad"><strong>19:00</strong> — Rifa benéfica.</div>
+      <div class="actividad"><strong>19:30</strong> — Suelta de carretones en la plaza para todos los públicos.</div>
+      <div class="actividad"><strong>00:00</strong> — Segundo TORO DE RONDA por EMBOLADORES DE SANTA PANTARIA y suelta de vaquillas GANADERÍA OLIVA ESCUDERO.</div>
+      <div class="actividad"><strong>01:15</strong> — Grupo SAUL OLE en el pabellón y DISCOMÓVIL con DJ CATA DANI.</div>
+    </section>
+
+    <!-- DOMINGO 12 OCTUBRE -->
+    <section id="12oct">
+      <h2>Domingo 12 de Octubre 2025 — “Sabiduría y despedida”</h2>
+      <div class="actividad"><strong>12:30</strong> — Santa Misa y procesión en honor a la Virgen del Pilar.</div>
+      <div class="actividad"><strong>16:00</strong> — Búsqueda de las majas acompañados de la charanga.</div>
+      <div class="actividad"><strong>17:00</strong> — Última suelta de vaquillas GANADERÍA ORO VELA (Tabuenca).</div>
+      <div class="actividad"><strong>19:30</strong> — Actuación en el teatro para mayores con entrega de obsequios.</div>
+      <div class="actividad"><strong>22:00</strong> — Fuegos artificiales y traca fin de fiestas en Parque del Zapatero.</div>
+      <div class="actividad"><strong>Fin</strong> — Se acabó lo que se daba… ¡ya estamos contando los días para las siguientes fiestas!</div>
+    </section> 
+  </main>
+</div>
+
+<script>
+  function mostrarSeccion(id) {
+    document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+  }
+</script>
 
 </body>
 </html>
